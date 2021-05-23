@@ -15,7 +15,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author mth
+ * @author Matthieu Roscio
  */
 @Entity
 @Table(name = "PhotoObjects")

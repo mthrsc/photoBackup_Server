@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.mth.photobackup2.Services;
 
 import com.mth.photobackup2.Config.ServerParameters;
@@ -25,7 +21,7 @@ import org.apache.commons.io.FileUtils;
 
 /**
  *
- * @author mth
+ * @author Matthieu Roscio
  */
 public class DiskOperation {
 
@@ -94,10 +90,8 @@ public class DiskOperation {
                 logTool.logToFile("writeFile - file name: " + incomingFileName + " - starts decision algo.");
 
                 //Pull existing object(s) from DB
-//                String queryText = "SELECT po FROM PhotoObject po WHERE po.locationOnDisk = :path";
                 String queryText = "SELECT po FROM PhotoObject po WHERE po.fileName = :name";
                 Query query = em.createQuery(queryText);
-//                query.setParameter("path", file.getAbsolutePath());
                 query.setParameter("name", String.valueOf(file.getName() + "%"));
 
                 ArrayList<PhotoObject> resultList = (ArrayList<PhotoObject>) query.getResultList();

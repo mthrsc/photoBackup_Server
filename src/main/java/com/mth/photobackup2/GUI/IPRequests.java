@@ -15,7 +15,7 @@ import org.apache.commons.io.IOUtils;
 
 /**
  *
- * @author mth
+ * @author Matthieu Roscio
  */
 public class IPRequests extends Thread {
 
@@ -42,8 +42,7 @@ public class IPRequests extends Thread {
     public void run() {
         while (true) {
             localIPText.setText(getLocalIP());
-//            publicIPText.setText(getPublicIP());
-            publicIPText.setText("Available in final version");
+            publicIPText.setText(getPublicIP());
             try {
                 Thread.sleep(600000);   //Verify IPs every 10 minutes
             } catch (InterruptedException ex) {

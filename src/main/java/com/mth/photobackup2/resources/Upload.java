@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.mth.photobackup2.resources;
 
 import com.mth.photobackup2.Objects.PhotoObject;
@@ -26,7 +22,7 @@ import org.glassfish.jersey.media.multipart.FormDataParam;
 
 /**
  *
- * @author mth
+ * @author Matthieu Roscio
  *
  */
 @Path("up")

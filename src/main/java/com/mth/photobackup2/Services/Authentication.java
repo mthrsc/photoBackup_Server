@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.mth.photobackup2.Services;
 
 import com.mth.photobackup2.Config.ServerParameters;
@@ -14,7 +10,7 @@ import java.util.Base64;
 
 /**
  *
- * @author mth
+ * @author Matthieu Roscio
  */
 public class Authentication {
 

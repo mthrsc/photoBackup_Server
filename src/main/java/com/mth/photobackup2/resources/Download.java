@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.mth.photobackup2.resources;
 
 import com.mth.photobackup2.Objects.PhotoObject;
@@ -32,7 +28,7 @@ import javax.ws.rs.core.Response.ResponseBuilder;
 
 /**
  *
- * @author mth
+ * @author Matthieu Roscio
  */
 @Path("down")
 public class Download {
@@ -131,7 +127,6 @@ public class Download {
     @POST
     @Path("request")
     @Consumes(MediaType.APPLICATION_JSON)
-//    @Produces(MediaType.APPLICATION_JSON)
     @Produces(MediaType.TEXT_PLAIN)
     public Response requestPhotoObject(@Context HttpHeaders httpheaders, @Context HttpServletRequest request,
             PhotoObject po) {

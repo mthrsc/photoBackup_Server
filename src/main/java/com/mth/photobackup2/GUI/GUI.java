@@ -376,7 +376,7 @@ public class GUI extends JFrame implements ActionListener {
         dbTool.start();
     }
 
-    ////////////////////////
+    
     private void startServer() {
         s = new ServerThread(sp.getPort(), "Server");
         System.out.println("------------------ServerThread ready to start");

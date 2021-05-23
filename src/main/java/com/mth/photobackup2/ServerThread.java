@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.mth.photobackup2;
 
 import com.mth.photobackup2.Tools.LogTool;
@@ -17,7 +13,7 @@ import org.glassfish.jersey.servlet.ServletContainer;
 
 /**
  *
- * @author mth
+ * @author Matthieu Roscio
  */
 public class ServerThread extends Thread {
 
@@ -70,7 +66,6 @@ public class ServerThread extends Thread {
         //MULTIPART registration /!\
 		
         serHol.setInitParameter(ServerProperties.PROVIDER_CLASSNAMES, MultiPartFeature.class.getCanonicalName());
-//        serHol.setInitParameter(ServerProperties.PROVIDER_CLASSNAMES, "org.glassfish.jersey.media.JerseyMediaJsonJackson");
 
         try {
             server.start();

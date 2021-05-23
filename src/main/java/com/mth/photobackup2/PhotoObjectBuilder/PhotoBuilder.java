@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.mth.photobackup2.PhotoObjectBuilder;
 
 import com.mth.photobackup2.Objects.PhotoObject;
@@ -23,7 +19,7 @@ import java.util.Date;
 
 /**
  *
- * @author mth
+ * @author Matthieu Roscio
  */
 public class PhotoBuilder {
 
@@ -101,7 +97,6 @@ public class PhotoBuilder {
             }
         } catch (ImageProcessingException | IOException | NumberFormatException e) {
             System.out.println("-----No metadata to extract");
-//            e.printStackTrace();
         }
         logTool.logToFile("Created PO for file: " + file.getName() + " - Result: " + po.toString());
         return po;
@@ -114,7 +109,6 @@ public class PhotoBuilder {
         PhotoObject po = new PhotoObject(file.getName(), file.getAbsolutePath());
         Date date = new Date();
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-//        po.setDateUploaded(formatter.format(date));
         po.setDateUploaded(formatter.format(file.lastModified()));
 
         try {

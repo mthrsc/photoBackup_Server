@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.mth.photobackup2.Tools;
 
 import com.mth.photobackup2.Config.ServerParameters;
@@ -14,7 +10,7 @@ import java.nio.file.Paths;
 
 /**
  *
- * @author mth
+ * @author Matthieu Roscio
  */
 public class ServerParametersManipulation {
 
@@ -30,14 +26,12 @@ public class ServerParametersManipulation {
         ServerParameters sp = new ServerParameters();
         File file = new File(parametersLocation);
         boolean fileExists = isJSonThere(file);
-//        System.out.println("--------Does file parms file exists: " + fileExists);
         boolean jsonValid = false;
         try {
             jsonValid = jm.isJSonValid(file);
         } catch (Exception e) {
             logTool.logToFile("getParameters Error: " + e.getMessage());
         }
-//        System.out.println("--------Is jsonValid: " + jsonValid);
 
         try {
             if (fileExists && jsonValid) {

@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.mth.photobackup2.Services;
 
 import com.mth.photobackup2.Objects.PhotoObject;
@@ -16,7 +12,7 @@ import javax.persistence.Query;
 
 /**
  *
- * @author mth
+ * @author Matthieu Roscio
  */
 public class ProbeDatabase {
 
@@ -39,9 +35,6 @@ public class ProbeDatabase {
         String queryText = "SELECT po FROM PhotoObject po WHERE po.fileName = :fileName";
         Query query = em.createQuery(queryText);
         query.setParameter("fileName", incomingPo.getFileName());
-//        String queryText = "SELECT po FROM PhotoObject po WHERE po = :po";
-//        Query query = em.createQuery(queryText, PhotoObject.class);
-//        query.setParameter("po", incomingPo);
 
         try {
             ArrayList queryList = (ArrayList) query.getResultList();
@@ -111,7 +104,6 @@ public class ProbeDatabase {
 
         PhotoObject photoObject = null;
 
-//        System.out.println("\n\n-----Checking database for file " + incomingPo.getFileName());
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("pers2");
         EntityManager em = emf.createEntityManager();
         EntityTransaction tx = em.getTransaction();
